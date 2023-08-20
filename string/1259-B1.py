@@ -16,6 +16,7 @@ from collections import deque
 while True:
     pelindrome = True
     input_case = input()
+    # 여기서 sys.stdin.readline() 을 사용할 경우 마지막에 '\n'까지 포함하게 되므로 len가 생각했던 것보다 1이 높음.
     if input_case == '0':
         break
 
