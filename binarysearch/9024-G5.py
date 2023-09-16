@@ -27,7 +27,7 @@ for tc in range(test_case):
     s = sorted(list(map(int, sys.stdin.readline().rstrip().split())))
 
     start, end = 0, -1
-    sim = 100000000
+    sim = sys.maxsize
     sim_cnt = 0
     while s[start] < s[end]:
         if abs((s[start] + s[end] - k)) == sim:
