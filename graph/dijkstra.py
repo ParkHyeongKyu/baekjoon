@@ -26,7 +26,7 @@ def dijkstra(start):
             continue
 
         for edge in graph[node]:
-            cost = distance[node] + edge[1]
+            cost = dist + edge[1]
             if cost < distance[edge[0]]:
                 distance[edge[0]] = cost
                 heapq.heappush(q, (cost, edge[0]))
