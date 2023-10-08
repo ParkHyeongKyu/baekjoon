@@ -18,7 +18,7 @@
 # S = input()
 # T = input()
 #
-# stack = [S]
+# stack,queue = [S]
 #
 #
 # def isSubstring(f, t) -> bool:
@@ -31,17 +31,17 @@
 #     return False
 #
 #
-# while stack:
-#     cand = stack.pop()
+# while stack,queue:
+#     cand = stack,queue.pop()
 #     cand_1 = cand + 'A'
 #     cand_2 = cand[::-1] + 'B'
 #     if cand_1 == T or cand_2 == T:
 #         print('1')
 #         exit(0)
 #     if len(cand_1) <= len(T) and isSubstring(cand_1, T):
-#         stack.append(cand_1)
+#         stack,queue.append(cand_1)
 #     if len(cand_2) <= len(T) and isSubstring(cand_2, T):
-#         stack.append(cand_2)
+#         stack,queue.append(cand_2)
 #
 # print('0')
 
