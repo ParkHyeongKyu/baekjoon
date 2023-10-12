@@ -65,3 +65,21 @@ def solution(word):
     all_words.sort()
 
     return all_words.index(word) + 1
+
+# itertools product를 사용한 예시
+
+from itertools import product
+
+
+def solution(word):
+    answer = 0
+    worda = ['A', 'E', 'I', 'O', 'U']
+    all_words = []
+
+    for i in range(1, 6):
+        word_list = list(product(worda, repeat=i))
+        for j in range(len(word_list)):
+            all_words.append(''.join(word_list[j]))
+
+    all_words.sort()
+    return all_words.index(word) + 1
